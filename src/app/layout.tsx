@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
-import '@ant-design/v5-patch-for-react-19';
+import "@ant-design/v5-patch-for-react-19";
 import AntdConfigProvider from "@/provider/AntdConfigProvider";
+import MainLayout from "@/layouts/MainLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,7 @@ export default function RootLayout({
       >
         <AntdRegistry>
           <AntdConfigProvider>
-            {children}
+            <MainLayout>{children}</MainLayout>
           </AntdConfigProvider>
         </AntdRegistry>
       </body>
