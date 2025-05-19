@@ -1,3 +1,5 @@
+"use client"
+
 import { Checkbox as AntdCheckbox } from 'antd';
 import type { CheckboxProps } from 'antd';
 
