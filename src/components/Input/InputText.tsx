@@ -1,3 +1,5 @@
+"use client"
+
 import { ChangeEvent } from "react";
 import { Input, type InputProps } from "antd";
 import { escapeHtmlEntities } from "@/utils/escapeHtml";

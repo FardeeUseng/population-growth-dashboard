@@ -1,3 +1,5 @@
+"use client"
+
 import type { InputNumberProps } from "antd";
 
 export default function InputNumber({ ...rest }: InputNumberProps) {
