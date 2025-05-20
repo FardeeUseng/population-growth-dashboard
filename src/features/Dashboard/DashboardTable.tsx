@@ -5,6 +5,7 @@ import { Table } from "antd";
 import type { TableProps } from "antd";
 import { enrichPopulationData } from "@/utils/enrichPopulation";
 import { formatNumber } from "@/utils/formatNumber";
+import { PopulationGrowthItem } from "./population-growth.type";
 
 type Props = {
   data: PopulationGrowthItem[];

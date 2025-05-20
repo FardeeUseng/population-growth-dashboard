@@ -1,3 +1,5 @@
+import { PopulationCountry } from "@/features/Dashboard/population-growth.type";
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const region = searchParams.get("region") || "WLD";

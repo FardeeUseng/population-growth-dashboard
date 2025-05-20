@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import PopulationGrowthDashboard from "@/features/Dashboard";
 
 async function getInitialPopulation() {
@@ -12,5 +13,9 @@ async function getInitialPopulation() {
 export default async function Page() {
   const initialData = await getInitialPopulation();
 
-  return <PopulationGrowthDashboard initialData={initialData} />;
+  return (
+    <Suspense fallback={<div>Loading dashboard...</div>}>
+      <PopulationGrowthDashboard initialData={initialData} />
+    </Suspense>
+  );
 }

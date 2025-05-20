@@ -1,13 +1,4 @@
-interface PopulationGrowthRes {
-  page: number;
-  pages: number;
-  per_page: number;
-  total: number;
-  sourceid: string;
-  lastupdated: string;
-}
-
-interface PopulationGrowthItem {
+export interface PopulationGrowthItem {
   indicator: {
     id: string;
     value: string;
@@ -27,7 +18,7 @@ interface PopulationGrowthItem {
   rank?: number;
 }
 
-interface PopulationCountry {
+export interface PopulationCountry {
   id: string;
   iso2Code: string;
   name: string;

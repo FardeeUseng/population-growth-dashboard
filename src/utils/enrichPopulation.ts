@@ -1,3 +1,5 @@
+import { PopulationGrowthItem } from "@/features/Dashboard/population-growth.type";
+
 export function enrichPopulationData(data: PopulationGrowthItem[]): PopulationGrowthItem[] {
   // 1. จัดเรียงข้อมูลจากเก่ามาก -> ใหม่มาก
   const sorted = [...data].sort((a, b) => Number(a.date) - Number(b.date));

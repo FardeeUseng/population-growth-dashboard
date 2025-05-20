@@ -16,6 +16,7 @@ import { indicators as indicatorOptions } from "@/constants/indicator";
 import { RangePickerProps } from "antd/es/date-picker";
 import dayjs from "dayjs";
 import PopulationChart from "./DashboardChart";
+import { PopulationGrowthItem } from "./population-growth.type";
 
 type Props = {
   data: PopulationGrowthItem[];

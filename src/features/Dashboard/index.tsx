@@ -5,6 +5,7 @@ import DashboardFilter from "./DashboardFilter";
 import PopulationGrowth from "./PopulationGrowth";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { PopulationGrowthItem } from "./population-growth.type";
 
 type Props = {
   initialData: PopulationGrowthItem[];

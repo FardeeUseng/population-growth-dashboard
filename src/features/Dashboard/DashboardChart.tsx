@@ -12,6 +12,7 @@ import {
 } from "recharts"; // หรือ interface ที่คุณใช้
 import { formatNumber } from "@/utils/formatNumber";
 import { useEffect, useState } from "react";
+import { PopulationGrowthItem } from "./population-growth.type";
 
 interface Props {
   data: PopulationGrowthItem[];
@@ -21,7 +22,6 @@ const getRandomColor = () =>
   `hsl(${Math.floor(Math.random() * 360)}, 70%, 50%)`;
 
 export default function PopulationChart({ data }: Props) {
-  // ✅ แปลงข้อมูลให้ Group ตามประเทศ (ใช้ year เป็นแกน X)
   const groupedByCountry: Record<string, { date: string; value: number }[]> =
     {};
 
@@ -68,7 +68,7 @@ export default function PopulationChart({ data }: Props) {
         <LineChart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="date" />
-          <YAxis width={90} tickFormatter={(v) => formatNumber(v)} />
+          <YAxis width={100} tickFormatter={(v) => formatNumber(v)} />
           <Tooltip formatter={(value: any) => formatNumber(value)} />
 
           {Object.keys(groupedByCountry).map((countryCode) => (
