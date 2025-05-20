@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { Skeleton } from "antd";
 import PopulationGrowthDashboard from "@/features/Dashboard";
 
 async function getInitialPopulation() {
@@ -14,7 +15,7 @@ export default async function Page() {
   const initialData = await getInitialPopulation();
 
   return (
-    <Suspense fallback={<div>Loading dashboard...</div>}>
+    <Suspense fallback={<Skeleton active />}>
       <PopulationGrowthDashboard initialData={initialData} />
     </Suspense>
   );

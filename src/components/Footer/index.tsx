@@ -6,32 +6,40 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-medium mb-2">About Us</h3>
             <p className="text-gray-300">
-              A brief description about your company and what you do.
+              {/* A brief description about your company and what you do. */}
             </p>
           </div>
           <div>
             <h3 className="text-lg font-medium mb-2">Contact</h3>
-            <p className="text-gray-300">Email: contact@example.com</p>
-            <p className="text-gray-300">Phone: (123) 456-7890</p>
+            <p className="text-gray-300">Email: fardee.tat@gmail.com</p>
+            {/* <p className="text-gray-300">Phone: (123) 456-7890</p> */}
           </div>
           <div>
             <h3 className="text-lg font-medium mb-2">Follow Us</h3>
             <div className="flex justify-center md:justify-start space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white">
-                Twitter
+              <a
+                href="https://github.com/FardeeUseng"
+                className="text-gray-300 hover:text-white"
+                target="_blank"
+              >
+                Github
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                Facebook
+              <a
+                href="https://www.linkedin.com/in/fardee-useng-060b88264/"
+                className="text-gray-300 hover:text-white"
+                target="_blank"
+              >
+                Link In
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                Instagram
+              <a href="https://medium.com/@fardee.tat" className="text-gray-300 hover:text-white">
+                Medium
               </a>
             </div>
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-gray-700">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} My Company. All rights reserved.
+            © {new Date().getFullYear()} Fardee Useng. All rights reserved.
           </p>
         </div>
       </div>
