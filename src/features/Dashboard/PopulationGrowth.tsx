@@ -15,6 +15,7 @@ import { RadioButton, RadioGroup } from "@/components/Radio";
 import { indicators as indicatorOptions } from "@/constants/indicator";
 import { RangePickerProps } from "antd/es/date-picker";
 import dayjs from "dayjs";
+import PopulationChart from "./DashboardChart";
 
 type Props = {
   data: PopulationGrowthItem[];
@@ -91,7 +92,11 @@ export default function PopulationGrowthDashboard({ data }: Props) {
       </div>
 
       <div className="mt-4">
-        {type === "table" ? <DashboardTable data={data} /> : null}
+        {type === "table" ? (
+          <DashboardTable data={data} />
+        ) : type === "chart" ? (
+          <PopulationChart data={data} />
+        ) : null}
       </div>
     </div>
   );
